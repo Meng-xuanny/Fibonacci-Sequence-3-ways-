@@ -1,0 +1,11 @@
+n=int(input("Enter a number\n"))
+
+def f(n):
+  if n in {0,1}:
+    return n
+  elif n<0 :
+    print("Incorrect Number")
+  else:
+    return f(n-1)+f(n-2)
+    
+print(f(n))
