@@ -1,0 +1,25 @@
+function fibonacci(n){
+    var output = [];
+    var a = 0;
+    var b = 1;
+    if( n === 1){
+        output = [0]; 
+    }
+    if(n===2){
+        output= [0, 1];
+    }
+    else{output= [0, 1];
+        var i = 2;
+        while(i<n){
+            var c = a + b;
+            a = b;
+            b = c;
+            output.push(b);
+            i ++;
+        }
+    }
+    return output;
+}
+
+
+document.write(fibonacci(9));
